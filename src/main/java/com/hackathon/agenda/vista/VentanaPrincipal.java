@@ -164,6 +164,7 @@ public class VentanaPrincipal extends JFrame {
         repaint();
     }
 
+    //Getters
     public JTextField getTxtNombre() {
         return txtNombre;
     }
@@ -192,15 +193,15 @@ public class VentanaPrincipal extends JFrame {
         return btnEliminar;
     }
 
-    public JTable getTablaDeContactos() {
-        return tablaDeContactos;
-    }
-
     public DefaultTableModel getModeloTabla() {
         return modeloTabla;
     }
 
     public JLabel getLblEstado() {
         return lblEstado;
+    }
+
+    public void mostrarError(String mensaje) {
+        JOptionPane.showMessageDialog(this, mensaje,"Error", JOptionPane.ERROR_MESSAGE);
     }
 }
