@@ -73,4 +73,4 @@ Gestiona la comunicación entre el Modelo y la Vista.
 - Fabian Rodriguez 
 - Elimer Rodriguez
 - Juan Angulo
-- Lina Corrales
+- Lina Gallardo
