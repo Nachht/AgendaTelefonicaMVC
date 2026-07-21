@@ -21,9 +21,9 @@ public class Contacto {
         }
 
 
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
+        this.nombre = nombre.trim();
+        this.apellido = apellido.trim();
+        this.telefono = telefono.trim();
     }
 
     public static boolean validarTextoIngresado(String texto) {
