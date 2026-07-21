@@ -1,6 +1,7 @@
 package com.hackathon.agenda.modelo;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Agenda {
 
@@ -43,16 +44,14 @@ public class Agenda {
         contactos.add(contacto);
     }
 
-    public void listarContactos() {
+    public ArrayList<Contacto> listarContactos() {
 
-        if (contactos.isEmpty()) {
-            System.out.println("La agenda está vacía.");
-            return;
-        }
-
-        for (Contacto contacto : contactos) {
-            System.out.println(contacto);
-        }
+        ArrayList<Contacto> listaOrdenada = new ArrayList<>(contactos);
+        listaOrdenada.sort(
+                Comparator.comparing(Contacto::getNombre, String.CASE_INSENSITIVE_ORDER)
+                        .thenComparing(Contacto::getApellido, String.CASE_INSENSITIVE_ORDER)
+        );
+        return listaOrdenada;
     }
 
     public Contacto buscarContacto(String nombre, String apellido) {
